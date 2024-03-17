@@ -1,24 +1,36 @@
 
+<head>
+    <link rel="stylesheet" href="login.component.scss">
+</head>
 
-<h1> Login </h1>
+
+<div class="outerbox">
+    <div class="innerbox">
+        <div class="loginbox">
+            <h1> Login </h1>
+
+            <span class="p-float-label">
+                <input pInputText id="username" [(ngModel)]="username" />
+                <label for="username">Username</label>
+            </span>
+
+            <span class="p-float-label">
+                <p-password [(ngModel)]="password" [feedback]="false" [toggleMask]="true"></p-password>
+                <label for="password">Password</label>
+            </span>
+            
+            <p-button label="Login"></p-button>
+
+            
+            <p-checkbox name="groupname" value="val1" label="Remember Me" [(ngModel)]="selectedValues"></p-checkbox>
+            
+
+            <div class="container">
+                <p-image src="assets/public/avatar.jpg" alt="Image" width="300" height="200"></p-image>  
+            </div>
+            </div>
+    </div>
+</div>
 
 
-
-<span class="p-float-label">
-    <input pInputText id="username" [(ngModel)]="username" />
-    <label for="username">Username</label>
-</span>
-<br>
-<span class="p-float-label">
-    <p-password [(ngModel)]="password" [feedback]="false" [toggleMask]="true"></p-password>
-    <label for="password">Password</label>
-</span>
-
-<p-button label="Login"></p-button>
-<br><br>
-
-<p-checkbox name="groupname" value="val1" label="Remember Me" [(ngModel)]="selectedValues"></p-checkbox>
-
-<br><br>
-<p-image src="assets/public/avatar.jpg" alt="Image" width="250"></p-image>  
 
