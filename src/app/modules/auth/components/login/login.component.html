@@ -9,25 +9,28 @@
         <div class="loginbox">
             <h1> Login </h1>
 
-            <span class="p-float-label">
-                <input pInputText id="username" [(ngModel)]="username" />
-                <label for="username">Username</label>
-            </span>
+            <div class="form-container">
+                <div class="form-field">
+                    <span class="p-float-label">
+                        <input pInputText id="username" [(ngModel)]="username" />
+                        <label for="username">Username</label>
+                    </span>
+                </div>
 
-            <span class="p-float-label">
-                <p-password [(ngModel)]="password" [feedback]="false" [toggleMask]="true"></p-password>
-                <label for="password">Password</label>
-            </span>
-            
-            <p-button label="Login"></p-button>
+                <div class="form-field">
+                    <span class="p-float-label">
+                        <p-password [(ngModel)]="password" [feedback]="false" [toggleMask]="true"></p-password>
+                        <label for="password">Password</label>
+                    </span>
+                </div>
 
+                <p-button label="Login"></p-button>
+            </div>
             
             <p-checkbox name="groupname" value="val1" label="Remember Me" [(ngModel)]="selectedValues"></p-checkbox>
             
 
-            <div class="container">
-                <p-image src="assets/public/avatar.jpg" alt="Image" width="300" height="200"></p-image>  
-            </div>
+                <p-image class="image" src="assets/public/avatar.jpg" alt="Image" width="380px" height="300px"></p-image>  
             </div>
     </div>
 </div>
