@@ -9,6 +9,8 @@ import { AppFooterComponent } from './layouts/app-footer/app-footer.component';
 import { AppHeaderComponent } from './layouts/app-header/app-header.component';
 import { AppMainComponent } from './layouts/app-main/app-main.component';
 import { AppNavBarComponent } from './layouts/app-nav-bar/app-nav-bar.component';
+import { LoginComponent } from './modules/auth/components/login/login.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -16,16 +18,17 @@ import { AppNavBarComponent } from './layouts/app-nav-bar/app-nav-bar.component'
     AppFooterComponent,
     AppHeaderComponent,
     AppMainComponent,
-    AppNavBarComponent
+    AppNavBarComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
     DataModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
