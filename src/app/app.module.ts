@@ -9,9 +9,13 @@ import { AppFooterComponent } from './layouts/app-footer/app-footer.component';
 import { AppHeaderComponent } from './layouts/app-header/app-header.component';
 import { AppMainComponent } from './layouts/app-main/app-main.component';
 import { AppNavBarComponent } from './layouts/app-nav-bar/app-nav-bar.component';
-import { LoginComponent } from './modules/auth/components/login/login.component';
 import { AboutComponent } from './about/about.component';
-
+import {
+  SocialLoginModule,
+  SocialAuthServiceConfig,
+} from '@abacritt/angularx-social-login';
+import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
+import { enviroment } from 'src/enviroment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,8 +31,22 @@ import { AboutComponent } from './about/about.component';
     CoreModule,
     DataModule,
     SharedModule,
+    SocialLoginModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(enviroment.authKey),
+          },
+        ],
+      } as SocialAuthServiceConfig,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

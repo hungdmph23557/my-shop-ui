@@ -19,6 +19,8 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "@types/gapi.auth2": "^0.0.60",
+    "angularx-social-login": "^4.1.0",
     "primeicons": "^6.0.1",
     "primeng": "^16.9.1",
     "rxjs": "~7.8.0",
