@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { AuthModule } from './modules/auth/auth.module';
+import { AppMainComponent } from './layouts/app-main/app-main.component';
 
 const routes: Routes = [
   {
@@ -10,8 +11,8 @@ const routes: Routes = [
       import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
   {
-    path: 'about',
-    component: AboutComponent,
+    path: 'trang-chu',
+    component: AppMainComponent,
   },
 ];
 

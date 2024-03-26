@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-app-main',
+  selector: 'app-main',
   templateUrl: './app-main.component.html',
   styleUrls: ['./app-main.component.scss'],
 })
-export class AppMainComponent {}
+export class AppMainComponent {
+  sidebarActive = false;
+}
